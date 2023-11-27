@@ -23,7 +23,7 @@ const formSchema = z.object({
 });
 
 export function SubmitIdeaForm() {
-  const { mutate } = api.post.create.useMutation();
+  const { mutate } = api.idea.create.useMutation();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
